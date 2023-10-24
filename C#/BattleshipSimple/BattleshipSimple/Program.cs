@@ -24,7 +24,7 @@ namespace BattleshipSimple
             while (true)
             {
                 // Step 3: Add horizontal labels
-                Console.Write("  ");
+                Console.Write("    ");
                 for (int i = 1; i <= 10; i++)
                 {
                     Console.Write("  " + i + " ");
@@ -40,6 +40,9 @@ namespace BattleshipSimple
                         Console.Write("#---");
                     }
                     Console.WriteLine("#");
+
+                    // Step 3: Add vertical labels (Moved here to align with rows)
+                    Console.Write(" " + (char)(65 + i) + " ");
 
                     // Draw the content and side borders of each cell
                     for (int j = 0; j < 10; j++)
@@ -68,9 +71,6 @@ namespace BattleshipSimple
                         Console.Write(" ");
                     }
                     Console.WriteLine("|");
-
-                    // Step 3: Add vertical labels
-                    Console.WriteLine(" " + (char)(65 + i));
                 }
 
                 // Draw the bottom border of the last row
