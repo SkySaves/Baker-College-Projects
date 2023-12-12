@@ -13,13 +13,17 @@ namespace CS3110_Module_8_GroupGreen
         private readonly Random _random;
         private int _gridSize;
         private bool[,] _occupiedPositions;
+        private List<Position> _potentialTargets = new List<Position>();
+        private bool _isTargetingShip = false;
+        private Position _lastHitPosition;
+
 
         public GroupGreenPlayer(string name)
         {
             Name = name;
             _random = new Random();
             // Initialize the _occupiedPositions array with a default size.
-            // This size should be the maximum possible grid size you expect.
+            // This size should be the maximum possible grid size expected
             _occupiedPositions = new bool[10, 10]; // Example size, adjust as needed
         }
 
@@ -89,16 +93,72 @@ namespace CS3110_Module_8_GroupGreen
 
         public Position GetAttackPosition()
         {
-            // Ensure the attack position is within the grid bounds
-            int xPosition = _random.Next(_gridSize); // X-coordinate within grid size
-            int yPosition = _random.Next(_gridSize); // Y-coordinate within grid size
-
-            return new Position(xPosition, yPosition);
+            if (!_isTargetingShip)
+            {
+                // Randomly select a position that hasn't been guessed yet
+                Position guess;
+                do
+                {
+                    guess = new Position(_random.Next(_gridSize), _random.Next(_gridSize));
+                } while (_occupiedPositions[guess.X, guess.Y]);
+                return guess;
+            }
+            else
+            {
+                // Target the neighboring cells of the last hit position
+                var neighbors = GetNeighbors(_lastHitPosition);
+                foreach (var neighbor in neighbors)
+                {
+                    if (IsValidPosition(neighbor) && !_occupiedPositions[neighbor.X, neighbor.Y])
+                    {
+                        return neighbor;
+                    }
+                }
+                // If no valid neighbors, revert to random guessing
+                _isTargetingShip = false;
+                return GetAttackPosition();
+            }
         }
 
         public void SetAttackResults(List<AttackResult> results)
         {
-            // Update AI's state based on the results of all players' attacks.
+            foreach (var result in results)
+            {
+                if (result.PlayerIndex == Index)
+                {
+                    _occupiedPositions[result.Position.X, result.Position.Y] = true;
+                    if (result.ResultType == AttackResultType.Hit)
+                    {
+                        _isTargetingShip = true;
+                        _lastHitPosition = result.Position;
+                    }
+                    else if (result.ResultType == AttackResultType.Sank)
+                    {
+                        _isTargetingShip = false;
+                    }
+                }
+            }
         }
+
+        private List<Position> GetNeighbors(Position position)
+        {
+            return new List<Position>
+            {
+                new Position(position.X - 1, position.Y),
+                new Position(position.X + 1, position.Y),
+                new Position(position.X, position.Y - 1),
+                new Position(position.X, position.Y + 1)
+            };
+        }
+
+        private bool IsValidPosition(Position position)
+        {
+            return position.X >= 0 && position.X < _gridSize && position.Y >= 0 && position.Y < _gridSize;
+        }
+
+
+
+
+
     }
 }

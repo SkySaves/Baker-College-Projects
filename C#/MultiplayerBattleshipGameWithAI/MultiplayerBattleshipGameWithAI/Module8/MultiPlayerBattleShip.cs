@@ -77,7 +77,7 @@ namespace CS3110_Module_8_GroupGreen
                 // Ask the current player for their move
                 Position pos = currentPlayer.GetAttackPosition();
 
-                //Work out if anything was hit
+                // Work out if anything was hit
                 var results = CheckAttack(pos);
 
                 // Notify each player of the results
@@ -109,10 +109,13 @@ namespace CS3110_Module_8_GroupGreen
                     if (_playerShips[player.Index].SunkMyBattleShip)
                     {
                         currentPlayers.Remove(player);
-                        // We never want to remvoe all the players... 
+                        if (i <= currentPlayerIndex && currentPlayerIndex > 0)
+                        {
+                            currentPlayerIndex--; // Adjust the index if necessary
+                        }
                         if (currentPlayers.Count == 1)
                         {
-                            break;
+                            break; // Exit if only one player is left
                         }
                     }
                 }
