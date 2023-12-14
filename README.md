@@ -5,4 +5,4 @@ Welcome to my repository containing a collection of projects developed during my
 * [MultiplayerBattleshipGameWithAI](https://github.com/SkySaves/Baker-College-Projects/tree/main/C%23/MultiplayerBattleshipGameWithAI/MultiplayerBattleshipGameWithAI)
 
 ### C++ Projects
-* [MetzgerProject2b](https://github.com/SkySaves/Baker-College-Projects/tree/main/C++/Cryptography/MetzgerProject2b)
+* [XORFileEncryptor](https://github.com/SkySaves/Baker-College-Projects/tree/main/C%2B%2B/Cryptography/XORFileEncryptor)
