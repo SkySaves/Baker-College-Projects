@@ -25,6 +25,11 @@ namespace CS3110_Module_8_GroupGreen
 
         internal void Play(PlayMode playMode)
         {
+            int loopCounter = 0;
+            const int maxLoops = 1000; // Arbitrary large number
+
+
+
             currentPlayers = new List<IPlayer>();
             var availablePlayers = new List<IPlayer>(_players);
             _playerGrids = new List<Grid>();
@@ -72,12 +77,15 @@ namespace CS3110_Module_8_GroupGreen
             int currentPlayerIndex = 0;
             while (currentPlayers.Count > 1)
             {
+                loopCounter++;
+                if (loopCounter > maxLoops)
+                {
+                    //Console.WriteLine("Debug: Exiting due to potential infinite loop.");
+                    break;
+                }
+
                 var currentPlayer = currentPlayers[currentPlayerIndex];
-
-                // Ask the current player for their move
                 Position pos = currentPlayer.GetAttackPosition();
-
-                // Work out if anything was hit
                 var results = CheckAttack(pos);
 
                 // Notify each player of the results
@@ -87,7 +95,6 @@ namespace CS3110_Module_8_GroupGreen
                 }
 
                 DrawGrids();
-
                 Console.WriteLine("\nPlayer " + currentPlayer.Index + "[" + currentPlayer.Name + "]  turn.");
                 Console.WriteLine("    Attack: " + pos.X + "," + pos.Y);
                 Console.WriteLine("\nResults:");
@@ -102,26 +109,40 @@ namespace CS3110_Module_8_GroupGreen
                 }
 
                 // Remove any ships with sunken battleships
-                // Iterate backwards so that we don't mess with the indexes
+                bool playerRemoved = false;
                 for (int i = currentPlayers.Count - 1; i >= 0; --i)
                 {
                     var player = currentPlayers[i];
                     if (_playerShips[player.Index].SunkMyBattleShip)
                     {
+                        //Console.WriteLine($"Debug: Player {player.Name} battleship sunk. Preparing to remove.");
                         currentPlayers.Remove(player);
+                        //Console.WriteLine($"Debug: Player {player.Name} removed. Players left: {currentPlayers.Count}");
+                        playerRemoved = true;
                         if (i <= currentPlayerIndex && currentPlayerIndex > 0)
                         {
                             currentPlayerIndex--; // Adjust the index if necessary
                         }
-                        if (currentPlayers.Count == 1)
-                        {
-                            break; // Exit if only one player is left
-                        }
                     }
                 }
 
-                // Move to next player wrapping around the end of the collection
-                currentPlayerIndex = (currentPlayerIndex + 1) % currentPlayers.Count;
+                //Console.WriteLine($"Debug: Checking for one player left. Players left: {currentPlayers.Count}");
+                if (currentPlayers.Count == 1)
+                {
+                    Console.WriteLine("Only one player left, ending game.");
+                    break;
+                }
+
+                if (!playerRemoved)
+                {
+                    // Move to next player
+                    //Console.WriteLine($"Debug: No player removed. Moving to next player. Current player index: {currentPlayerIndex}");
+                    currentPlayerIndex = (currentPlayerIndex + 1) % currentPlayers.Count;
+                }
+                else
+                {
+                    //Console.WriteLine($"Debug: Player removed. Current player index remains: {currentPlayerIndex}");
+                }
 
                 if (playMode == PlayMode.Pause)
                 {
@@ -133,7 +154,7 @@ namespace CS3110_Module_8_GroupGreen
                     Thread.Sleep(2000);
                 }
                 else if (playMode == PlayMode.NoDelay)
-                { 
+                {
                     // Don't delay or pause
                 }
             }
@@ -147,7 +168,10 @@ namespace CS3110_Module_8_GroupGreen
             do
             {
                 cki = Console.ReadKey(true);
+                //Console.WriteLine("Debug: Key pressed to continue.");
+
             } while (cki.Key != ConsoleKey.OemPeriod);
+
         }
 
         private List<AttackResult> CheckAttack(Position pos)

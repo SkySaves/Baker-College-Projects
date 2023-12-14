@@ -16,7 +16,7 @@ namespace CS3110_Module_8_GroupGreen
         private List<Position> _potentialTargets = new List<Position>();
         private bool _isTargetingShip = false;
         private Position _lastHitPosition;
-
+        private List<Position> _unguessedPositions;
 
         public GroupGreenPlayer(string name)
         {
@@ -25,6 +25,7 @@ namespace CS3110_Module_8_GroupGreen
             // Initialize the _occupiedPositions array with a default size.
             // This size should be the maximum possible grid size expected
             _occupiedPositions = new bool[10, 10]; // Example size, adjust as needed
+            _unguessedPositions = new List<Position>();
         }
 
         public void StartNewGame(int playerIndex, int gridSize, Ships ships)
@@ -62,8 +63,16 @@ namespace CS3110_Module_8_GroupGreen
                     }
                 }
             }
+            // Initialize the list of unguessed positions
+            _unguessedPositions.Clear();
+            for (int x = 0; x < gridSize; x++)
+            {
+                for (int y = 0; y < gridSize; y++)
+                {
+                    _unguessedPositions.Add(new Position(x, y));
+                }
+            }
         }
-
 
 
         private bool CanPlaceShip(int startX, int startY, int length, Direction direction, int gridSize)
@@ -93,6 +102,8 @@ namespace CS3110_Module_8_GroupGreen
 
         public Position GetAttackPosition()
         {
+            //Console.WriteLine($"Debug: {Name} GetAttackPosition called.");
+
             if (!_isTargetingShip)
             {
                 // Randomly select a position that hasn't been guessed yet
@@ -100,7 +111,10 @@ namespace CS3110_Module_8_GroupGreen
                 do
                 {
                     guess = new Position(_random.Next(_gridSize), _random.Next(_gridSize));
+                    //Console.WriteLine($"Debug: {Name} considering random position {guess.X},{guess.Y}");
                 } while (_occupiedPositions[guess.X, guess.Y]);
+
+                Console.WriteLine($"Debug: {Name} guessing position {guess.X},{guess.Y}");
                 return guess;
             }
             else
@@ -109,15 +123,45 @@ namespace CS3110_Module_8_GroupGreen
                 var neighbors = GetNeighbors(_lastHitPosition);
                 foreach (var neighbor in neighbors)
                 {
+                    //Console.WriteLine($"Debug: {Name} considering neighbor position {neighbor.X},{neighbor.Y}");
                     if (IsValidPosition(neighbor) && !_occupiedPositions[neighbor.X, neighbor.Y])
                     {
+                        Console.WriteLine($"Debug: {Name} targeting position {neighbor.X},{neighbor.Y}");
                         return neighbor;
                     }
                 }
-                // If no valid neighbors, revert to random guessing
-                _isTargetingShip = false;
+
+                if (_unguessedPositions.Count > 0)
+                {
+                    int index = _random.Next(_unguessedPositions.Count);
+                    Position guess = _unguessedPositions[index];
+                    _unguessedPositions.RemoveAt(index);
+                    //Console.WriteLine($"Debug: {Name} guessing position {guess.X},{guess.Y}");
+                    return guess;
+                }
+                else
+                {
+                    // Fallback in case all positions have been guessed
+                    //Console.WriteLine($"Debug: {Name} has no more positions to guess");
+                    return new Position(0, 0); // This should ideally never happen
+                }
+          
+            // If no valid neighbors, revert to random guessing
+            _isTargetingShip = false;
+                //Console.WriteLine($"Debug: {Name} reverting to random guessing");
                 return GetAttackPosition();
+
             }
+        }
+
+        private Position GetRandomGuess()
+        {
+            Position guess;
+            do
+            {
+                guess = new Position(_random.Next(_gridSize), _random.Next(_gridSize));
+            } while (_occupiedPositions[guess.X, guess.Y]);
+            return guess;
         }
 
         public void SetAttackResults(List<AttackResult> results)
