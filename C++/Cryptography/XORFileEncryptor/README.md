@@ -9,13 +9,13 @@ This C++ project presents a simple yet effective file encryption and decryption 
 
 ### Usage
 The tool is used via command-line arguments in the following format:
-* To encrypt: Project2b.exe [input file] [output file] [password]
-* To decrypt: Project2b.exe [encrypted file] [output file] [password]
+* To encrypt: XORFileEncryptor.exe [input file] [output file] [password]
+* To decrypt: XORFileEncryptor.exe [encrypted file] [output file] [password]
 
 For example:
 
-* Encrypt test.txt to encetest.bin with password password: Project2b.exe test.txt encetest.bin password
-* Decrypt encetest.bin to decryptedtest.txt with password password: Project2b.exe encetest.bin decryptedtest.txt password
+* Encrypt test.txt to encetest.bin with password password: XORFileEncryptor.exe test.txt encetest.bin password
+* Decrypt encetest.bin to decryptedtest.txt with password password: XORFileEncryptor.exe encetest.bin decryptedtest.txt password
 
 A comparison command like comp test.txt decryptedtest.txt can be used to verify the integrity of the encryption and decryption process.
 ### Project Structure
