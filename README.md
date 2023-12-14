@@ -3,6 +3,7 @@ Welcome to my repository containing a collection of projects developed during my
 ## Noteable Projects
 ### C# Projects
 * [MultiplayerBattleshipGameWithAI](https://github.com/SkySaves/Baker-College-Projects/tree/main/C%23/MultiplayerBattleshipGameWithAI/MultiplayerBattleshipGameWithAI)
+* [TimeWatchersClock](https://github.com/SkySaves/Baker-College-Projects/tree/main/C%23/TimeWatchersClock)
 
 ### C++ Projects
 * [XORFileEncryptor](https://github.com/SkySaves/Baker-College-Projects/tree/main/C%2B%2B/Cryptography/XORFileEncryptor)
