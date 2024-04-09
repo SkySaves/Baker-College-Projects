@@ -7,7 +7,7 @@ This project presents a comprehensive view of the Historical Consumer Price Inde
 ## Project Components
 
 - **HTML Document (`index.html`)**: Displays the CPI data in a tabular format, with styling applied for readability and visual appeal. This document includes a navigation link to validate the HTML structure and a link to the data source.
-- **Python Script**: Reads raw CPI data from a text file and generates an HTML table. This script showcases the practical application of Python for web content generation.
+- **Python Script(`yeahno.py`)**: Reads raw CPI data from a text file and generates an HTML table. This script showcases the practical application of Python for web content generation.
 
 ## Key Features
 
@@ -21,7 +21,7 @@ This project presents a comprehensive view of the Historical Consumer Price Inde
 2. Place your CPI data in a text file named `cpi_data.txt`.
 3. Run the provided Python script to generate the HTML file:
     ```bash
-    python script_name.py
+    python yeahno.py
     ```
 4. Open the generated HTML file in a web browser to view the formatted CPI data.
 
