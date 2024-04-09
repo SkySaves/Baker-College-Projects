@@ -1,0 +1,122 @@
+
+/* Styles for the My Cars website */
+/* Written by Skyler Metzger */
+
+body {
+    font-family: Cambria, "Times New Roman", Times, serif;
+    width: 600pt;
+    margin: auto;
+    padding: 10pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Tahoma, Calibri, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.banner {
+    background-image: url("images/cars_banner.png");
+    background-repeat: no-repeat;
+    background-size: 600pt 150pt;
+    width: 600pt;
+    height: 150pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    color: #4169e1;
+    font-family: "Brush Script MT", Arial, Helvetica, sans-serif;
+    font-size: 64pt;
+    text-shadow: 4pt 4pt 4pt gray;
+}
+
+nav {
+    font-family: "Tahoma", Calibri, Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    background-color: black;
+    width: 600pt;
+    padding: 1ex 0;
+    color: white;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8080ff;
+    text-decoration: underline;
+}
+
+#car_photo {
+    border: 1pt solid black;
+    width: 250pt;
+    float: right;
+    padding: 10pt;
+    margin: 0 0 1em 1em;
+}
+
+#car_photo figure, #car_photo details {
+    padding: 0;
+    margin: 0;
+}
+
+#car_photo img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+dt, dd {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+dt {
+    font-weight: bold;
+    width: 33%;
+}
+
+dt::after {
+    content: ":";
+}
+
+dd {
+    width: 66%;
+}
+
+.three_col {
+    display: flex;
+}
+
+.three_col a {
+    width: 33%;
+    padding: 0;
+    margin: 0;
+}
