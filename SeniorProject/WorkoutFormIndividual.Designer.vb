@@ -22,15 +22,19 @@ Partial Class WorkoutFormIndividual
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         btnBack = New Button()
-        Label1 = New Label()
+        lblWorkoutName = New Label()
         Label2 = New Label()
         Panel1 = New Panel()
-        TextBox1 = New TextBox()
+        txtWorkoutNote = New TextBox()
         btnFinish = New Button()
         Panel2 = New Panel()
-        lbTimer = New Label()
-        Label3 = New Label()
+        lblElapsedTime = New Label()
+        flpExercises = New FlowLayoutPanel()
+        btnCancel = New Button()
+        Timer1 = New Timer(components)
+        btnAddExercise = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -40,99 +44,130 @@ Partial Class WorkoutFormIndividual
         btnBack.BackColor = SystemColors.ControlText
         btnBack.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnBack.ForeColor = SystemColors.ButtonHighlight
-        btnBack.Location = New Point(44, 38)
+        btnBack.Location = New Point(38, 28)
+        btnBack.Margin = New Padding(3, 2, 3, 2)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(94, 47)
+        btnBack.Size = New Size(82, 35)
         btnBack.TabIndex = 1
         btnBack.Text = "Back"
         btnBack.UseVisualStyleBackColor = False
         ' 
-        ' Label1
+        ' lblWorkoutName
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(85, 129)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(245, 28)
-        Label1.TabIndex = 3
-        Label1.Text = "Insert Workout Name Here"
+        lblWorkoutName.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblWorkoutName.Location = New Point(74, 97)
+        lblWorkoutName.Name = "lblWorkoutName"
+        lblWorkoutName.Size = New Size(196, 21)
+        lblWorkoutName.TabIndex = 3
+        lblWorkoutName.Text = "Insert Workout Name Here"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(85, 167)
+        Label2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(575, 75)
         Label2.Name = "Label2"
-        Label2.Size = New Size(264, 28)
+        Label2.Size = New Size(128, 42)
         Label2.TabIndex = 4
-        Label2.Text = "Current Duration of Workout"
+        Label2.Text = "Current Duration" & vbCrLf & "of Workout:"
         ' 
         ' Panel1
         ' 
-        Panel1.Controls.Add(TextBox1)
-        Panel1.Location = New Point(168, 234)
+        Panel1.Controls.Add(txtWorkoutNote)
+        Panel1.Location = New Point(147, 176)
+        Panel1.Margin = New Padding(3, 2, 3, 2)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(635, 59)
+        Panel1.Size = New Size(556, 44)
         Panel1.TabIndex = 5
         ' 
-        ' TextBox1
+        ' txtWorkoutNote
         ' 
-        TextBox1.Location = New Point(3, 17)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(612, 27)
-        TextBox1.TabIndex = 0
-        TextBox1.Text = "Workout note (optional)"
+        txtWorkoutNote.Location = New Point(3, 13)
+        txtWorkoutNote.Margin = New Padding(3, 2, 3, 2)
+        txtWorkoutNote.Name = "txtWorkoutNote"
+        txtWorkoutNote.Size = New Size(536, 23)
+        txtWorkoutNote.TabIndex = 0
+        txtWorkoutNote.Text = "Workout note (optional)"
         ' 
         ' btnFinish
         ' 
         btnFinish.BackColor = SystemColors.ControlText
         btnFinish.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnFinish.ForeColor = SystemColors.ButtonHighlight
-        btnFinish.Location = New Point(804, 38)
+        btnFinish.Location = New Point(704, 28)
+        btnFinish.Margin = New Padding(3, 2, 3, 2)
         btnFinish.Name = "btnFinish"
-        btnFinish.Size = New Size(94, 47)
+        btnFinish.Size = New Size(82, 35)
         btnFinish.TabIndex = 6
         btnFinish.Text = "Finish"
         btnFinish.UseVisualStyleBackColor = False
         ' 
         ' Panel2
         ' 
-        Panel2.Controls.Add(lbTimer)
-        Panel2.Location = New Point(778, 100)
+        Panel2.Controls.Add(lblElapsedTime)
+        Panel2.Location = New Point(704, 75)
+        Panel2.Margin = New Padding(3, 2, 3, 2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(155, 78)
+        Panel2.Size = New Size(118, 56)
         Panel2.TabIndex = 7
         ' 
-        ' lbTimer
+        ' lblElapsedTime
         ' 
-        lbTimer.AutoSize = True
-        lbTimer.Location = New Point(26, 17)
-        lbTimer.Name = "lbTimer"
-        lbTimer.Size = New Size(115, 40)
-        lbTimer.TabIndex = 0
-        lbTimer.Text = "Current Time on" & vbCrLf & "Rest Timer"
+        lblElapsedTime.AutoSize = True
+        lblElapsedTime.Location = New Point(23, 13)
+        lblElapsedTime.Name = "lblElapsedTime"
+        lblElapsedTime.Size = New Size(93, 30)
+        lblElapsedTime.TabIndex = 0
+        lblElapsedTime.Text = "Current Time on" & vbCrLf & "Rest Timer"
         ' 
-        ' Label3
+        ' flpExercises
         ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(150, 419)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(398, 20)
-        Label3.TabIndex = 8
-        Label3.Text = "INSERT ALL WORKOUT DETAILS FOR EACH EXERCISE HERE"
+        flpExercises.AutoScroll = True
+        flpExercises.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        flpExercises.Location = New Point(38, 224)
+        flpExercises.Margin = New Padding(3, 2, 3, 2)
+        flpExercises.Name = "flpExercises"
+        flpExercises.Size = New Size(782, 366)
+        flpExercises.TabIndex = 8
+        ' 
+        ' btnCancel
+        ' 
+        btnCancel.Location = New Point(22, 610)
+        btnCancel.Margin = New Padding(3, 2, 3, 2)
+        btnCancel.Name = "btnCancel"
+        btnCancel.Size = New Size(99, 33)
+        btnCancel.TabIndex = 9
+        btnCancel.Text = "Cancel"
+        btnCancel.UseVisualStyleBackColor = True
+        ' 
+        ' Timer1
+        ' 
+        ' 
+        ' btnAddExercise
+        ' 
+        btnAddExercise.Location = New Point(365, 611)
+        btnAddExercise.Margin = New Padding(3, 2, 3, 2)
+        btnAddExercise.Name = "btnAddExercise"
+        btnAddExercise.Size = New Size(114, 32)
+        btnAddExercise.TabIndex = 10
+        btnAddExercise.Text = "Add Exercise"
+        btnAddExercise.UseVisualStyleBackColor = True
         ' 
         ' WorkoutFormIndividual
         ' 
-        Me.AutoScaleDimensions = New SizeF(8F, 20F)
+        Me.AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         Me.AutoScaleMode = AutoScaleMode.Font
-        Me.ClientSize = New Size(964, 1058)
-        Me.Controls.Add(Label3)
+        Me.ClientSize = New Size(844, 672)
+        Me.Controls.Add(flpExercises)
+        Me.Controls.Add(btnAddExercise)
+        Me.Controls.Add(btnCancel)
         Me.Controls.Add(Panel2)
         Me.Controls.Add(btnFinish)
         Me.Controls.Add(Panel1)
         Me.Controls.Add(Label2)
-        Me.Controls.Add(Label1)
+        Me.Controls.Add(lblWorkoutName)
         Me.Controls.Add(btnBack)
+        Me.Margin = New Padding(3, 2, 3, 2)
         Me.Name = "WorkoutFormIndividual"
         Me.Text = "WorkoutFormIndividual"
         Panel1.ResumeLayout(False)
@@ -143,12 +178,15 @@ Partial Class WorkoutFormIndividual
         Me.PerformLayout()
     End Sub
     Friend WithEvents btnBack As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblWorkoutName As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtWorkoutNote As TextBox
     Friend WithEvents btnFinish As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents lbTimer As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblElapsedTime As Label
+    Friend WithEvents flpExercises As FlowLayoutPanel
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents btnAddExercise As Button
 End Class

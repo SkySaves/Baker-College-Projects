@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\sande\\source\\repos\\SeniorProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\workoutformindividual.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutformindividual.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\workoutform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
@@ -27,16 +11,56 @@
       "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\exercisecontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:exercisecontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\exercisecontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:exercisecontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\exercisecontrol.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:exercisecontrol.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\workoutformindividual.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutformindividual.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\workoutformindividual.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutformindividual.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\workoutmodels.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutmodels.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\workoutdataclasses.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutdataclasses.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\workoutformindividual.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:workoutformindividual.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\seniorproject.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:seniorproject.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:mainform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|c:\\users\\sande\\source\\repos\\seniorproject\\nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{D7BB7DEB-B1A1-4043-BD49-7D166D26B03F}|SeniorProject.vbproj|solutionrelative:nutritionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,33 +86,109 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Application.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\My Project\\Application.Designer.vb",
-              "RelativeDocumentMoniker": "My Project\\Application.Designer.vb",
-              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\My Project\\Application.Designer.vb",
-              "RelativeToolTip": "My Project\\Application.Designer.vb",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAeAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "WorkoutFormIndividual.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutFormIndividual.Designer.vb",
+              "RelativeDocumentMoniker": "WorkoutFormIndividual.Designer.vb",
+              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutFormIndividual.Designer.vb",
+              "RelativeToolTip": "WorkoutFormIndividual.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-24T01:12:40.298Z",
+              "WhenOpened": "2025-01-30T00:21:56.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SeniorProject",
+              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\SeniorProject.vbproj",
+              "RelativeDocumentMoniker": "SeniorProject.vbproj",
+              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\SeniorProject.vbproj",
+              "RelativeToolTip": "SeniorProject.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-01-30T00:22:15.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExerciseControl.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\ExerciseControl.Designer.vb",
+              "RelativeDocumentMoniker": "ExerciseControl.Designer.vb",
+              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\ExerciseControl.Designer.vb",
+              "RelativeToolTip": "ExerciseControl.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-30T00:20:34.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExerciseControl.vb",
+              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\ExerciseControl.vb",
+              "RelativeDocumentMoniker": "ExerciseControl.vb",
+              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\ExerciseControl.vb",
+              "RelativeToolTip": "ExerciseControl.vb",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-29T22:58:01.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExerciseControl.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\ExerciseControl.vb",
+              "RelativeDocumentMoniker": "ExerciseControl.vb",
+              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\ExerciseControl.vb [Design]",
+              "RelativeToolTip": "ExerciseControl.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-29T22:57:46.262Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "WorkoutModels.vb",
+              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutModels.vb",
+              "RelativeDocumentMoniker": "WorkoutModels.vb",
+              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutModels.vb",
+              "RelativeToolTip": "WorkoutModels.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-29T21:31:41.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WorkoutDataClasses.vb",
+              "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutDataClasses.vb",
+              "RelativeDocumentMoniker": "WorkoutDataClasses.vb",
+              "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutDataClasses.vb",
+              "RelativeToolTip": "WorkoutDataClasses.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-29T21:25:58.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "WorkoutFormIndividual.vb",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutFormIndividual.vb",
               "RelativeDocumentMoniker": "WorkoutFormIndividual.vb",
               "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutFormIndividual.vb",
               "RelativeToolTip": "WorkoutFormIndividual.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAowHsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-24T00:55:24.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "WorkoutFormIndividual.vb [Design]",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutFormIndividual.vb",
               "RelativeDocumentMoniker": "WorkoutFormIndividual.vb",
@@ -100,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "WorkoutForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutForm.vb",
               "RelativeDocumentMoniker": "WorkoutForm.vb",
@@ -112,46 +212,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "WorkoutForm.vb",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutForm.vb",
               "RelativeDocumentMoniker": "WorkoutForm.vb",
               "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\WorkoutForm.vb",
               "RelativeToolTip": "WorkoutForm.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAowDYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-23T23:19:47.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "MainForm.vb",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\MainForm.vb",
               "RelativeDocumentMoniker": "MainForm.vb",
               "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\MainForm.vb",
               "RelativeToolTip": "MainForm.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA3wAEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-23T23:12:05.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "NutritionForm.vb",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\NutritionForm.vb",
               "RelativeDocumentMoniker": "NutritionForm.vb",
               "ToolTip": "C:\\Users\\sande\\source\\repos\\SeniorProject\\NutritionForm.vb",
               "RelativeToolTip": "NutritionForm.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA8wBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-23T23:19:13.05Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "NutritionForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\NutritionForm.vb",
               "RelativeDocumentMoniker": "NutritionForm.vb",
@@ -163,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "MainForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\sande\\source\\repos\\SeniorProject\\MainForm.vb",
               "RelativeDocumentMoniker": "MainForm.vb",

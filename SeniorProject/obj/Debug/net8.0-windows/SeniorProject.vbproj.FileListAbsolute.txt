@@ -17,3 +17,4 @@ C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\refint\Senior
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.pdb
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.genruntimeconfig.cache
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\ref\SeniorProject.dll
+C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.ExerciseControl.resources
