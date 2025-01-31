@@ -22,23 +22,23 @@ Partial Class NutritionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
+        lblDate = New Label()
         btnNextDay = New Button()
         btnPreviousDay = New Button()
         Label2 = New Label()
         Label3 = New Label()
         Label4 = New Label()
-        lbConsumed = New Label()
-        lbBurned = New Label()
-        lbRemaining = New Label()
-        lbEnergy = New Label()
+        lblConsumed = New Label()
+        lblBurned = New Label()
+        lblRemaining = New Label()
+        lblEnergy = New Label()
         Label5 = New Label()
         Label6 = New Label()
-        lbProtein = New Label()
+        lblProtein = New Label()
         Label7 = New Label()
-        lbCarbs = New Label()
+        lblCarbs = New Label()
         Label9 = New Label()
-        lbFat = New Label()
+        lblFat = New Label()
         btnAddUncat = New Button()
         btnAddBreakfast = New Button()
         btnAddLunch = New Button()
@@ -51,18 +51,27 @@ Partial Class NutritionForm
         cbBreakfast = New ComboBox()
         cbUncat = New ComboBox()
         btnBack = New Button()
+        dgvFoods = New DataGridView()
+        colMealCategory = New DataGridViewTextBoxColumn()
+        colFoodName = New DataGridViewTextBoxColumn()
+        colServingDescription = New DataGridViewTextBoxColumn()
+        colCalories = New DataGridViewTextBoxColumn()
+        colProtein = New DataGridViewTextBoxColumn()
+        colCarbs = New DataGridViewTextBoxColumn()
+        colFat = New DataGridViewTextBoxColumn()
         TableLayoutPanel1.SuspendLayout()
+        CType(dgvFoods, ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         ' 
-        ' Label1
+        ' lblDate
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(383, 61)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(65, 25)
-        Label1.TabIndex = 0
-        Label1.Text = "Today"
+        lblDate.AutoSize = True
+        lblDate.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblDate.Location = New Point(383, 61)
+        lblDate.Name = "lblDate"
+        lblDate.Size = New Size(65, 25)
+        lblDate.TabIndex = 0
+        lblDate.Text = "Today"
         ' 
         ' btnNextDay
         ' 
@@ -120,48 +129,48 @@ Partial Class NutritionForm
         Label4.TabIndex = 6
         Label4.Text = "Remaining"
         ' 
-        ' lbConsumed
+        ' lblConsumed
         ' 
-        lbConsumed.AutoSize = True
-        lbConsumed.BorderStyle = BorderStyle.FixedSingle
-        lbConsumed.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lbConsumed.Location = New Point(225, 162)
-        lbConsumed.Name = "lbConsumed"
-        lbConsumed.Size = New Size(58, 23)
-        lbConsumed.TabIndex = 7
-        lbConsumed.Text = "Label5"
+        lblConsumed.AutoSize = True
+        lblConsumed.BorderStyle = BorderStyle.FixedSingle
+        lblConsumed.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblConsumed.Location = New Point(225, 162)
+        lblConsumed.Name = "lblConsumed"
+        lblConsumed.Size = New Size(58, 23)
+        lblConsumed.TabIndex = 7
+        lblConsumed.Text = "Label5"
         ' 
-        ' lbBurned
+        ' lblBurned
         ' 
-        lbBurned.AutoSize = True
-        lbBurned.BorderStyle = BorderStyle.FixedSingle
-        lbBurned.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lbBurned.Location = New Point(374, 162)
-        lbBurned.Name = "lbBurned"
-        lbBurned.Size = New Size(58, 23)
-        lbBurned.TabIndex = 8
-        lbBurned.Text = "Label6"
+        lblBurned.AutoSize = True
+        lblBurned.BorderStyle = BorderStyle.FixedSingle
+        lblBurned.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblBurned.Location = New Point(374, 162)
+        lblBurned.Name = "lblBurned"
+        lblBurned.Size = New Size(58, 23)
+        lblBurned.TabIndex = 8
+        lblBurned.Text = "Label6"
         ' 
-        ' lbRemaining
+        ' lblRemaining
         ' 
-        lbRemaining.AutoSize = True
-        lbRemaining.BorderStyle = BorderStyle.FixedSingle
-        lbRemaining.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lbRemaining.Location = New Point(522, 162)
-        lbRemaining.Name = "lbRemaining"
-        lbRemaining.Size = New Size(58, 23)
-        lbRemaining.TabIndex = 9
-        lbRemaining.Text = "Label7"
+        lblRemaining.AutoSize = True
+        lblRemaining.BorderStyle = BorderStyle.FixedSingle
+        lblRemaining.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblRemaining.Location = New Point(522, 162)
+        lblRemaining.Name = "lblRemaining"
+        lblRemaining.Size = New Size(58, 23)
+        lblRemaining.TabIndex = 9
+        lblRemaining.Text = "Label7"
         ' 
-        ' lbEnergy
+        ' lblEnergy
         ' 
-        lbEnergy.AutoSize = True
-        lbEnergy.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lbEnergy.Location = New Point(269, 221)
-        lbEnergy.Name = "lbEnergy"
-        lbEnergy.Size = New Size(56, 21)
-        lbEnergy.TabIndex = 10
-        lbEnergy.Text = "Label5"
+        lblEnergy.AutoSize = True
+        lblEnergy.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblEnergy.Location = New Point(269, 221)
+        lblEnergy.Name = "lblEnergy"
+        lblEnergy.Size = New Size(56, 21)
+        lblEnergy.TabIndex = 10
+        lblEnergy.Text = "Label5"
         ' 
         ' Label5
         ' 
@@ -183,15 +192,15 @@ Partial Class NutritionForm
         Label6.TabIndex = 13
         Label6.Text = "Protein -"
         ' 
-        ' lbProtein
+        ' lblProtein
         ' 
-        lbProtein.AutoSize = True
-        lbProtein.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lbProtein.Location = New Point(269, 256)
-        lbProtein.Name = "lbProtein"
-        lbProtein.Size = New Size(56, 21)
-        lbProtein.TabIndex = 12
-        lbProtein.Text = "Label5"
+        lblProtein.AutoSize = True
+        lblProtein.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblProtein.Location = New Point(269, 256)
+        lblProtein.Name = "lblProtein"
+        lblProtein.Size = New Size(56, 21)
+        lblProtein.TabIndex = 12
+        lblProtein.Text = "Label5"
         ' 
         ' Label7
         ' 
@@ -203,15 +212,15 @@ Partial Class NutritionForm
         Label7.TabIndex = 15
         Label7.Text = "Net Carbs -"
         ' 
-        ' lbCarbs
+        ' lblCarbs
         ' 
-        lbCarbs.AutoSize = True
-        lbCarbs.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lbCarbs.Location = New Point(291, 290)
-        lbCarbs.Name = "lbCarbs"
-        lbCarbs.Size = New Size(56, 21)
-        lbCarbs.TabIndex = 14
-        lbCarbs.Text = "Label5"
+        lblCarbs.AutoSize = True
+        lblCarbs.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblCarbs.Location = New Point(291, 290)
+        lblCarbs.Name = "lblCarbs"
+        lblCarbs.Size = New Size(56, 21)
+        lblCarbs.TabIndex = 14
+        lblCarbs.Text = "Label5"
         ' 
         ' Label9
         ' 
@@ -223,15 +232,15 @@ Partial Class NutritionForm
         Label9.TabIndex = 17
         Label9.Text = "Fat -"
         ' 
-        ' lbFat
+        ' lblFat
         ' 
-        lbFat.AutoSize = True
-        lbFat.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lbFat.Location = New Point(239, 326)
-        lbFat.Name = "lbFat"
-        lbFat.Size = New Size(56, 21)
-        lbFat.TabIndex = 16
-        lbFat.Text = "Label5"
+        lblFat.AutoSize = True
+        lblFat.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblFat.Location = New Point(239, 326)
+        lblFat.Name = "lblFat"
+        lblFat.Size = New Size(56, 21)
+        lblFat.TabIndex = 16
+        lblFat.Text = "Label5"
         ' 
         ' btnAddUncat
         ' 
@@ -298,7 +307,7 @@ Partial Class NutritionForm
         btnAddSnacks.Location = New Point(3, 142)
         btnAddSnacks.Margin = New Padding(3, 2, 3, 2)
         btnAddSnacks.Name = "btnAddSnacks"
-        btnAddSnacks.Size = New Size(36, 31)
+        btnAddSnacks.Size = New Size(36, 32)
         btnAddSnacks.TabIndex = 22
         btnAddSnacks.Text = "+"
         btnAddSnacks.UseVisualStyleBackColor = True
@@ -327,7 +336,7 @@ Partial Class NutritionForm
         TableLayoutPanel1.RowStyles.Add(New RowStyle())
         TableLayoutPanel1.RowStyles.Add(New RowStyle())
         TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.Size = New Size(623, 165)
+        TableLayoutPanel1.Size = New Size(623, 176)
         TableLayoutPanel1.TabIndex = 23
         ' 
         ' cbSnacks
@@ -393,56 +402,102 @@ Partial Class NutritionForm
         btnBack.Text = "Back"
         btnBack.UseVisualStyleBackColor = False
         ' 
+        ' dgvFoods
+        ' 
+        dgvFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvFoods.Columns.AddRange(New DataGridViewColumn() {colMealCategory, colFoodName, colServingDescription, colCalories, colProtein, colCarbs, colFat})
+        dgvFoods.Location = New Point(98, 597)
+        dgvFoods.Name = "dgvFoods"
+        dgvFoods.Size = New Size(743, 181)
+        dgvFoods.TabIndex = 25
+        ' 
+        ' colMealCategory
+        ' 
+        colMealCategory.HeaderText = "Meal Category"
+        colMealCategory.Name = "colMealCategory"
+        ' 
+        ' colFoodName
+        ' 
+        colFoodName.HeaderText = "Food Name"
+        colFoodName.Name = "colFoodName"
+        ' 
+        ' colServingDescription
+        ' 
+        colServingDescription.HeaderText = "Serving"
+        colServingDescription.Name = "colServingDescription"
+        ' 
+        ' colCalories
+        ' 
+        colCalories.HeaderText = "Calories"
+        colCalories.Name = "colCalories"
+        ' 
+        ' colProtein
+        ' 
+        colProtein.HeaderText = "Protein"
+        colProtein.Name = "colProtein"
+        ' 
+        ' colCarbs
+        ' 
+        colCarbs.HeaderText = "Carbs"
+        colCarbs.Name = "colCarbs"
+        ' 
+        ' colFat
+        ' 
+        colFat.HeaderText = "Fat"
+        colFat.Name = "colFat"
+        ' 
         ' NutritionForm
         ' 
         Me.AutoScaleDimensions = New SizeF(7F, 15F)
         Me.AutoScaleMode = AutoScaleMode.Font
-        Me.ClientSize = New Size(888, 642)
+        Me.ClientSize = New Size(888, 809)
+        Me.Controls.Add(dgvFoods)
         Me.Controls.Add(btnBack)
         Me.Controls.Add(TableLayoutPanel1)
         Me.Controls.Add(Label9)
-        Me.Controls.Add(lbFat)
+        Me.Controls.Add(lblFat)
         Me.Controls.Add(Label7)
-        Me.Controls.Add(lbCarbs)
+        Me.Controls.Add(lblCarbs)
         Me.Controls.Add(Label6)
-        Me.Controls.Add(lbProtein)
+        Me.Controls.Add(lblProtein)
         Me.Controls.Add(Label5)
-        Me.Controls.Add(lbEnergy)
-        Me.Controls.Add(lbRemaining)
-        Me.Controls.Add(lbBurned)
-        Me.Controls.Add(lbConsumed)
+        Me.Controls.Add(lblEnergy)
+        Me.Controls.Add(lblRemaining)
+        Me.Controls.Add(lblBurned)
+        Me.Controls.Add(lblConsumed)
         Me.Controls.Add(Label4)
         Me.Controls.Add(Label3)
         Me.Controls.Add(Label2)
         Me.Controls.Add(btnPreviousDay)
         Me.Controls.Add(btnNextDay)
-        Me.Controls.Add(Label1)
+        Me.Controls.Add(lblDate)
         Me.Margin = New Padding(3, 2, 3, 2)
         Me.Name = "NutritionForm"
         Me.Text = "NutritionForm"
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
+        CType(dgvFoods, ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblDate As Label
     Friend WithEvents btnNextDay As Button
     Friend WithEvents btnPreviousDay As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents lbConsumed As Label
-    Friend WithEvents lbBurned As Label
-    Friend WithEvents lbRemaining As Label
-    Friend WithEvents lbEnergy As Label
+    Friend WithEvents lblConsumed As Label
+    Friend WithEvents lblBurned As Label
+    Friend WithEvents lblRemaining As Label
+    Friend WithEvents lblEnergy As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents lbProtein As Label
+    Friend WithEvents lblProtein As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents lbCarbs As Label
+    Friend WithEvents lblCarbs As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents lbFat As Label
+    Friend WithEvents lblFat As Label
     Friend WithEvents btnAddUncat As Button
     Friend WithEvents btnAddBreakfast As Button
     Friend WithEvents btnAddLunch As Button
@@ -455,4 +510,12 @@ Partial Class NutritionForm
     Friend WithEvents cbLunch As ComboBox
     Friend WithEvents cbBreakfast As ComboBox
     Friend WithEvents btnBack As Button
+    Friend WithEvents dgvFoods As DataGridView
+    Friend WithEvents colMealCategory As DataGridViewTextBoxColumn
+    Friend WithEvents colFoodName As DataGridViewTextBoxColumn
+    Friend WithEvents colServingDescription As DataGridViewTextBoxColumn
+    Friend WithEvents colCalories As DataGridViewTextBoxColumn
+    Friend WithEvents colProtein As DataGridViewTextBoxColumn
+    Friend WithEvents colCarbs As DataGridViewTextBoxColumn
+    Friend WithEvents colFat As DataGridViewTextBoxColumn
 End Class

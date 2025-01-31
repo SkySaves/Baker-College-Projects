@@ -1,5 +1,4 @@
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.MainForm.resources
-C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.NutritionForm.resources
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.WorkoutForm.resources
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.WorkoutFormIndividual.resources
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.vbproj.GenerateResource.cache
@@ -18,3 +17,8 @@ C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.genruntimeconfig.cache
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\ref\SeniorProject.dll
 C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.ExerciseControl.resources
+C:\Users\sande\source\repos\SeniorProject\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.vbproj.AssemblyReference.cache
+C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorPr.18FF8FFE.Up2Date
+C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.FoodSearchForm.resources
+C:\Users\sande\source\repos\SeniorProject\obj\Debug\net8.0-windows\SeniorProject.NutritionForm.resources
