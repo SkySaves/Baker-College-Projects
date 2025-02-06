@@ -87,4 +87,10 @@
         End If
     End Sub
 
+    Private Sub txtExerciseName_TextChanged(sender As Object, e As EventArgs) Handles txtExerciseName.TextChanged
+        If _exercise IsNot Nothing Then
+            ' Store whatever the user typed into the in-memory object
+            _exercise.ExerciseName = txtExerciseName.Text
+        End If
+    End Sub
 End Class

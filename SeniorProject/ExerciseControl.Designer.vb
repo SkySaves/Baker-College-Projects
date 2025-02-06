@@ -114,7 +114,7 @@ Partial Class ExerciseControl
         ' 
         ' ExerciseControl
         ' 
-        Me.AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        Me.AutoScaleDimensions = New SizeF(7F, 15F)
         Me.AutoScaleMode = AutoScaleMode.Font
         Me.Controls.Add(txtExerciseName)
         Me.Controls.Add(dgvSets)

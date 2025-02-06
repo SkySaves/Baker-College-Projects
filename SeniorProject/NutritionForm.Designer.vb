@@ -67,7 +67,7 @@ Partial Class NutritionForm
         ' 
         lblDate.AutoSize = True
         lblDate.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblDate.Location = New Point(383, 61)
+        lblDate.Location = New Point(414, 53)
         lblDate.Name = "lblDate"
         lblDate.Size = New Size(65, 25)
         lblDate.TabIndex = 0
@@ -78,7 +78,7 @@ Partial Class NutritionForm
         btnNextDay.BackColor = SystemColors.ControlText
         btnNextDay.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnNextDay.ForeColor = SystemColors.ButtonHighlight
-        btnNextDay.Location = New Point(456, 56)
+        btnNextDay.Location = New Point(704, 53)
         btnNextDay.Margin = New Padding(3, 2, 3, 2)
         btnNextDay.Name = "btnNextDay"
         btnNextDay.Size = New Size(51, 33)
@@ -91,7 +91,7 @@ Partial Class NutritionForm
         btnPreviousDay.BackColor = SystemColors.ControlText
         btnPreviousDay.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnPreviousDay.ForeColor = SystemColors.ButtonHighlight
-        btnPreviousDay.Location = New Point(327, 56)
+        btnPreviousDay.Location = New Point(208, 53)
         btnPreviousDay.Margin = New Padding(3, 2, 3, 2)
         btnPreviousDay.Name = "btnPreviousDay"
         btnPreviousDay.Size = New Size(51, 33)

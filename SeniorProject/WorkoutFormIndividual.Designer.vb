@@ -24,7 +24,6 @@ Partial Class WorkoutFormIndividual
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
         btnBack = New Button()
-        lblWorkoutName = New Label()
         Label2 = New Label()
         Panel1 = New Panel()
         txtWorkoutNote = New TextBox()
@@ -35,6 +34,7 @@ Partial Class WorkoutFormIndividual
         btnCancel = New Button()
         Timer1 = New Timer(components)
         btnAddExercise = New Button()
+        txtWorkoutName = New TextBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -52,19 +52,10 @@ Partial Class WorkoutFormIndividual
         btnBack.Text = "Back"
         btnBack.UseVisualStyleBackColor = False
         ' 
-        ' lblWorkoutName
-        ' 
-        lblWorkoutName.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        lblWorkoutName.Location = New Point(74, 97)
-        lblWorkoutName.Name = "lblWorkoutName"
-        lblWorkoutName.Size = New Size(196, 21)
-        lblWorkoutName.TabIndex = 3
-        lblWorkoutName.Text = "Insert Workout Name Here"
-        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(575, 75)
         Label2.Name = "Label2"
         Label2.Size = New Size(128, 42)
@@ -85,9 +76,9 @@ Partial Class WorkoutFormIndividual
         txtWorkoutNote.Location = New Point(3, 13)
         txtWorkoutNote.Margin = New Padding(3, 2, 3, 2)
         txtWorkoutNote.Name = "txtWorkoutNote"
+        txtWorkoutNote.PlaceholderText = "Workout note (optional)"
         txtWorkoutNote.Size = New Size(536, 23)
         txtWorkoutNote.TabIndex = 0
-        txtWorkoutNote.Text = "Workout note (optional)"
         ' 
         ' btnFinish
         ' 
@@ -153,11 +144,21 @@ Partial Class WorkoutFormIndividual
         btnAddExercise.Text = "Add Exercise"
         btnAddExercise.UseVisualStyleBackColor = True
         ' 
+        ' txtWorkoutName
+        ' 
+        txtWorkoutName.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        txtWorkoutName.Location = New Point(76, 98)
+        txtWorkoutName.Name = "txtWorkoutName"
+        txtWorkoutName.PlaceholderText = "Insert Workout Name Here"
+        txtWorkoutName.Size = New Size(239, 33)
+        txtWorkoutName.TabIndex = 11
+        ' 
         ' WorkoutFormIndividual
         ' 
-        Me.AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        Me.AutoScaleDimensions = New SizeF(7F, 15F)
         Me.AutoScaleMode = AutoScaleMode.Font
         Me.ClientSize = New Size(844, 672)
+        Me.Controls.Add(txtWorkoutName)
         Me.Controls.Add(flpExercises)
         Me.Controls.Add(btnAddExercise)
         Me.Controls.Add(btnCancel)
@@ -165,7 +166,6 @@ Partial Class WorkoutFormIndividual
         Me.Controls.Add(btnFinish)
         Me.Controls.Add(Panel1)
         Me.Controls.Add(Label2)
-        Me.Controls.Add(lblWorkoutName)
         Me.Controls.Add(btnBack)
         Me.Margin = New Padding(3, 2, 3, 2)
         Me.Name = "WorkoutFormIndividual"
@@ -178,7 +178,6 @@ Partial Class WorkoutFormIndividual
         Me.PerformLayout()
     End Sub
     Friend WithEvents btnBack As Button
-    Friend WithEvents lblWorkoutName As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents txtWorkoutNote As TextBox
@@ -189,4 +188,5 @@ Partial Class WorkoutFormIndividual
     Friend WithEvents btnCancel As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents btnAddExercise As Button
+    Friend WithEvents txtWorkoutName As TextBox
 End Class
