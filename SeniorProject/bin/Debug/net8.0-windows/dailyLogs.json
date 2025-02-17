@@ -74,5 +74,83 @@
   "2025-01-21T00:00:00-05:00": {
     "LogDate": "2025-01-21T00:00:00-05:00",
     "Foods": []
+  },
+  "2025-02-17T00:00:00-05:00": {
+    "LogDate": "2025-02-17T00:00:00-05:00",
+    "Foods": [
+      {
+        "MealCategory": "Uncategorized",
+        "FoodName": "Classic Roast Beef Burger",
+        "ServingDescription": "1 x 1 serving",
+        "Calories": 360.0,
+        "Protein": 23.0,
+        "Carbs": 37.0,
+        "Fat": 14.0
+      },
+      {
+        "MealCategory": "Breakfast",
+        "FoodName": "Oranges",
+        "ServingDescription": "1 x 1 fruit (2-5/8\" dia)",
+        "Calories": 62.0,
+        "Protein": 1.23,
+        "Carbs": 15.39,
+        "Fat": 0.16
+      },
+      {
+        "MealCategory": "Snacks",
+        "FoodName": "Cheddar Cheese",
+        "ServingDescription": "1 x 1 slice (1 oz)",
+        "Calories": 113.0,
+        "Protein": 6.97,
+        "Carbs": 0.36,
+        "Fat": 9.28
+      }
+    ]
+  },
+  "2025-02-16T00:00:00-05:00": {
+    "LogDate": "2025-02-16T00:00:00-05:00",
+    "Foods": [
+      {
+        "MealCategory": "Dinner",
+        "FoodName": "Rice Sides - Chicken",
+        "ServingDescription": "1 x 1/2 cup prepared",
+        "Calories": 300.0,
+        "Protein": 6.0,
+        "Carbs": 50.0,
+        "Fat": 9.0
+      }
+    ]
+  },
+  "2025-02-15T00:00:00-05:00": {
+    "LogDate": "2025-02-15T00:00:00-05:00",
+    "Foods": []
+  },
+  "2025-02-14T00:00:00-05:00": {
+    "LogDate": "2025-02-14T00:00:00-05:00",
+    "Foods": []
+  },
+  "2025-02-13T00:00:00-05:00": {
+    "LogDate": "2025-02-13T00:00:00-05:00",
+    "Foods": []
+  },
+  "2025-02-12T00:00:00-05:00": {
+    "LogDate": "2025-02-12T00:00:00-05:00",
+    "Foods": []
+  },
+  "2025-02-11T00:00:00-05:00": {
+    "LogDate": "2025-02-11T00:00:00-05:00",
+    "Foods": []
+  },
+  "2025-02-10T00:00:00-05:00": {
+    "LogDate": "2025-02-10T00:00:00-05:00",
+    "Foods": []
+  },
+  "2025-02-09T00:00:00-05:00": {
+    "LogDate": "2025-02-09T00:00:00-05:00",
+    "Foods": []
+  },
+  "2025-02-18T00:00:00-05:00": {
+    "LogDate": "2025-02-18T00:00:00-05:00",
+    "Foods": []
   }
 }

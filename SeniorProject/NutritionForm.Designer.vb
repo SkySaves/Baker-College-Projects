@@ -39,17 +39,6 @@ Partial Class NutritionForm
         lblCarbs = New Label()
         Label9 = New Label()
         lblFat = New Label()
-        btnAddUncat = New Button()
-        btnAddBreakfast = New Button()
-        btnAddLunch = New Button()
-        btnAddDinner = New Button()
-        btnAddSnacks = New Button()
-        TableLayoutPanel1 = New TableLayoutPanel()
-        cbSnacks = New ComboBox()
-        cbDinner = New ComboBox()
-        cbLunch = New ComboBox()
-        cbBreakfast = New ComboBox()
-        cbUncat = New ComboBox()
         btnBack = New Button()
         dgvFoods = New DataGridView()
         colMealCategory = New DataGridViewTextBoxColumn()
@@ -59,8 +48,19 @@ Partial Class NutritionForm
         colProtein = New DataGridViewTextBoxColumn()
         colCarbs = New DataGridViewTextBoxColumn()
         colFat = New DataGridViewTextBoxColumn()
-        TableLayoutPanel1.SuspendLayout()
+        Label1 = New Label()
+        Label8 = New Label()
+        Label10 = New Label()
+        Label11 = New Label()
+        Label12 = New Label()
+        btnAddUncat = New Button()
+        btnAddLunch = New Button()
+        btnAddDinner = New Button()
+        btnAddBreakfast = New Button()
+        TableLayoutPanel1 = New TableLayoutPanel()
+        btnAddSnacks = New Button()
         CType(dgvFoods, ComponentModel.ISupportInitialize).BeginInit()
+        TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         ' 
         ' lblDate
@@ -242,153 +242,6 @@ Partial Class NutritionForm
         lblFat.TabIndex = 16
         lblFat.Text = "Label5"
         ' 
-        ' btnAddUncat
-        ' 
-        btnAddUncat.AutoSize = True
-        btnAddUncat.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnAddUncat.Dock = DockStyle.Fill
-        btnAddUncat.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddUncat.Location = New Point(3, 2)
-        btnAddUncat.Margin = New Padding(3, 2, 3, 2)
-        btnAddUncat.Name = "btnAddUncat"
-        btnAddUncat.Size = New Size(36, 31)
-        btnAddUncat.TabIndex = 18
-        btnAddUncat.Text = "+"
-        btnAddUncat.UseVisualStyleBackColor = True
-        ' 
-        ' btnAddBreakfast
-        ' 
-        btnAddBreakfast.AutoSize = True
-        btnAddBreakfast.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnAddBreakfast.Dock = DockStyle.Fill
-        btnAddBreakfast.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddBreakfast.Location = New Point(3, 37)
-        btnAddBreakfast.Margin = New Padding(3, 2, 3, 2)
-        btnAddBreakfast.Name = "btnAddBreakfast"
-        btnAddBreakfast.Size = New Size(36, 31)
-        btnAddBreakfast.TabIndex = 19
-        btnAddBreakfast.Text = "+"
-        btnAddBreakfast.UseVisualStyleBackColor = True
-        ' 
-        ' btnAddLunch
-        ' 
-        btnAddLunch.AutoSize = True
-        btnAddLunch.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnAddLunch.Dock = DockStyle.Fill
-        btnAddLunch.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddLunch.Location = New Point(3, 72)
-        btnAddLunch.Margin = New Padding(3, 2, 3, 2)
-        btnAddLunch.Name = "btnAddLunch"
-        btnAddLunch.Size = New Size(36, 31)
-        btnAddLunch.TabIndex = 20
-        btnAddLunch.Text = "+"
-        btnAddLunch.UseVisualStyleBackColor = True
-        ' 
-        ' btnAddDinner
-        ' 
-        btnAddDinner.AutoSize = True
-        btnAddDinner.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnAddDinner.Dock = DockStyle.Fill
-        btnAddDinner.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddDinner.Location = New Point(3, 107)
-        btnAddDinner.Margin = New Padding(3, 2, 3, 2)
-        btnAddDinner.Name = "btnAddDinner"
-        btnAddDinner.Size = New Size(36, 31)
-        btnAddDinner.TabIndex = 21
-        btnAddDinner.Text = "+"
-        btnAddDinner.UseVisualStyleBackColor = True
-        ' 
-        ' btnAddSnacks
-        ' 
-        btnAddSnacks.AutoSize = True
-        btnAddSnacks.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnAddSnacks.Dock = DockStyle.Fill
-        btnAddSnacks.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnAddSnacks.Location = New Point(3, 142)
-        btnAddSnacks.Margin = New Padding(3, 2, 3, 2)
-        btnAddSnacks.Name = "btnAddSnacks"
-        btnAddSnacks.Size = New Size(36, 32)
-        btnAddSnacks.TabIndex = 22
-        btnAddSnacks.Text = "+"
-        btnAddSnacks.UseVisualStyleBackColor = True
-        ' 
-        ' TableLayoutPanel1
-        ' 
-        TableLayoutPanel1.ColumnCount = 2
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 6.78670359F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 93.213295F))
-        TableLayoutPanel1.Controls.Add(cbSnacks, 1, 4)
-        TableLayoutPanel1.Controls.Add(cbDinner, 1, 3)
-        TableLayoutPanel1.Controls.Add(cbLunch, 1, 2)
-        TableLayoutPanel1.Controls.Add(cbBreakfast, 1, 1)
-        TableLayoutPanel1.Controls.Add(btnAddSnacks, 0, 4)
-        TableLayoutPanel1.Controls.Add(btnAddBreakfast, 0, 1)
-        TableLayoutPanel1.Controls.Add(btnAddDinner, 0, 3)
-        TableLayoutPanel1.Controls.Add(btnAddLunch, 0, 2)
-        TableLayoutPanel1.Controls.Add(btnAddUncat, 0, 0)
-        TableLayoutPanel1.Controls.Add(cbUncat, 1, 0)
-        TableLayoutPanel1.Location = New Point(144, 377)
-        TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
-        TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 5
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.RowStyles.Add(New RowStyle())
-        TableLayoutPanel1.Size = New Size(623, 176)
-        TableLayoutPanel1.TabIndex = 23
-        ' 
-        ' cbSnacks
-        ' 
-        cbSnacks.Dock = DockStyle.Fill
-        cbSnacks.FormattingEnabled = True
-        cbSnacks.Location = New Point(45, 142)
-        cbSnacks.Margin = New Padding(3, 2, 3, 2)
-        cbSnacks.Name = "cbSnacks"
-        cbSnacks.Size = New Size(575, 23)
-        cbSnacks.TabIndex = 27
-        ' 
-        ' cbDinner
-        ' 
-        cbDinner.Dock = DockStyle.Fill
-        cbDinner.FormattingEnabled = True
-        cbDinner.Location = New Point(45, 107)
-        cbDinner.Margin = New Padding(3, 2, 3, 2)
-        cbDinner.Name = "cbDinner"
-        cbDinner.Size = New Size(575, 23)
-        cbDinner.TabIndex = 26
-        ' 
-        ' cbLunch
-        ' 
-        cbLunch.Dock = DockStyle.Fill
-        cbLunch.FormattingEnabled = True
-        cbLunch.Location = New Point(45, 72)
-        cbLunch.Margin = New Padding(3, 2, 3, 2)
-        cbLunch.Name = "cbLunch"
-        cbLunch.Size = New Size(575, 23)
-        cbLunch.TabIndex = 25
-        ' 
-        ' cbBreakfast
-        ' 
-        cbBreakfast.Dock = DockStyle.Fill
-        cbBreakfast.FormattingEnabled = True
-        cbBreakfast.Location = New Point(45, 37)
-        cbBreakfast.Margin = New Padding(3, 2, 3, 2)
-        cbBreakfast.Name = "cbBreakfast"
-        cbBreakfast.Size = New Size(575, 23)
-        cbBreakfast.TabIndex = 24
-        ' 
-        ' cbUncat
-        ' 
-        cbUncat.Dock = DockStyle.Fill
-        cbUncat.FormattingEnabled = True
-        cbUncat.Location = New Point(45, 2)
-        cbUncat.Margin = New Padding(3, 2, 3, 2)
-        cbUncat.Name = "cbUncat"
-        cbUncat.Size = New Size(575, 23)
-        cbUncat.TabIndex = 23
-        ' 
         ' btnBack
         ' 
         btnBack.BackColor = SystemColors.ControlText
@@ -406,9 +259,9 @@ Partial Class NutritionForm
         ' 
         dgvFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvFoods.Columns.AddRange(New DataGridViewColumn() {colMealCategory, colFoodName, colServingDescription, colCalories, colProtein, colCarbs, colFat})
-        dgvFoods.Location = New Point(98, 597)
+        dgvFoods.Location = New Point(189, 350)
         dgvFoods.Name = "dgvFoods"
-        dgvFoods.Size = New Size(743, 181)
+        dgvFoods.Size = New Size(740, 214)
         dgvFoods.TabIndex = 25
         ' 
         ' colMealCategory
@@ -446,11 +299,153 @@ Partial Class NutritionForm
         colFat.HeaderText = "Fat"
         colFat.Name = "colFat"
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(58, 389)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(83, 15)
+        Label1.TabIndex = 26
+        Label1.Text = "Uncategorized"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(83, 424)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(55, 15)
+        Label8.TabIndex = 27
+        Label8.Text = "Breakfast"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Location = New Point(101, 459)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(40, 15)
+        Label10.TabIndex = 28
+        Label10.Text = "Lunch"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(96, 494)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(42, 15)
+        Label11.TabIndex = 29
+        Label11.Text = "Dinner"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Location = New Point(95, 530)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(43, 15)
+        Label12.TabIndex = 30
+        Label12.Text = "Snacks"
+        ' 
+        ' btnAddUncat
+        ' 
+        btnAddUncat.AutoSize = True
+        btnAddUncat.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnAddUncat.Dock = DockStyle.Fill
+        btnAddUncat.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddUncat.Location = New Point(3, 2)
+        btnAddUncat.Margin = New Padding(3, 2, 3, 2)
+        btnAddUncat.Name = "btnAddUncat"
+        btnAddUncat.Size = New Size(36, 31)
+        btnAddUncat.TabIndex = 18
+        btnAddUncat.Text = "+"
+        btnAddUncat.UseVisualStyleBackColor = True
+        ' 
+        ' btnAddLunch
+        ' 
+        btnAddLunch.AutoSize = True
+        btnAddLunch.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnAddLunch.Dock = DockStyle.Fill
+        btnAddLunch.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddLunch.Location = New Point(3, 72)
+        btnAddLunch.Margin = New Padding(3, 2, 3, 2)
+        btnAddLunch.Name = "btnAddLunch"
+        btnAddLunch.Size = New Size(36, 31)
+        btnAddLunch.TabIndex = 20
+        btnAddLunch.Text = "+"
+        btnAddLunch.UseVisualStyleBackColor = True
+        ' 
+        ' btnAddDinner
+        ' 
+        btnAddDinner.AutoSize = True
+        btnAddDinner.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnAddDinner.Dock = DockStyle.Fill
+        btnAddDinner.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddDinner.Location = New Point(3, 107)
+        btnAddDinner.Margin = New Padding(3, 2, 3, 2)
+        btnAddDinner.Name = "btnAddDinner"
+        btnAddDinner.Size = New Size(36, 31)
+        btnAddDinner.TabIndex = 21
+        btnAddDinner.Text = "+"
+        btnAddDinner.UseVisualStyleBackColor = True
+        ' 
+        ' btnAddBreakfast
+        ' 
+        btnAddBreakfast.AutoSize = True
+        btnAddBreakfast.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnAddBreakfast.Dock = DockStyle.Fill
+        btnAddBreakfast.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddBreakfast.Location = New Point(3, 37)
+        btnAddBreakfast.Margin = New Padding(3, 2, 3, 2)
+        btnAddBreakfast.Name = "btnAddBreakfast"
+        btnAddBreakfast.Size = New Size(36, 31)
+        btnAddBreakfast.TabIndex = 19
+        btnAddBreakfast.Text = "+"
+        btnAddBreakfast.UseVisualStyleBackColor = True
+        ' 
+        ' TableLayoutPanel1
+        ' 
+        TableLayoutPanel1.ColumnCount = 2
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 6.78670359F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 93.213295F))
+        TableLayoutPanel1.Controls.Add(btnAddSnacks, 0, 4)
+        TableLayoutPanel1.Controls.Add(btnAddBreakfast, 0, 1)
+        TableLayoutPanel1.Controls.Add(btnAddDinner, 0, 3)
+        TableLayoutPanel1.Controls.Add(btnAddLunch, 0, 2)
+        TableLayoutPanel1.Controls.Add(btnAddUncat, 0, 0)
+        TableLayoutPanel1.Location = New Point(144, 377)
+        TableLayoutPanel1.Margin = New Padding(3, 2, 3, 2)
+        TableLayoutPanel1.Name = "TableLayoutPanel1"
+        TableLayoutPanel1.RowCount = 5
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.RowStyles.Add(New RowStyle())
+        TableLayoutPanel1.Size = New Size(623, 176)
+        TableLayoutPanel1.TabIndex = 23
+        ' 
+        ' btnAddSnacks
+        ' 
+        btnAddSnacks.AutoSize = True
+        btnAddSnacks.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnAddSnacks.Dock = DockStyle.Fill
+        btnAddSnacks.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnAddSnacks.Location = New Point(3, 142)
+        btnAddSnacks.Margin = New Padding(3, 2, 3, 2)
+        btnAddSnacks.Name = "btnAddSnacks"
+        btnAddSnacks.Size = New Size(36, 32)
+        btnAddSnacks.TabIndex = 22
+        btnAddSnacks.Text = "+"
+        btnAddSnacks.UseVisualStyleBackColor = True
+        ' 
         ' NutritionForm
         ' 
         Me.AutoScaleDimensions = New SizeF(7F, 15F)
         Me.AutoScaleMode = AutoScaleMode.Font
-        Me.ClientSize = New Size(888, 809)
+        Me.ClientSize = New Size(1021, 809)
+        Me.Controls.Add(Label12)
+        Me.Controls.Add(Label11)
+        Me.Controls.Add(Label10)
+        Me.Controls.Add(Label8)
+        Me.Controls.Add(Label1)
         Me.Controls.Add(dgvFoods)
         Me.Controls.Add(btnBack)
         Me.Controls.Add(TableLayoutPanel1)
@@ -474,9 +469,9 @@ Partial Class NutritionForm
         Me.Margin = New Padding(3, 2, 3, 2)
         Me.Name = "NutritionForm"
         Me.Text = "NutritionForm"
+        CType(dgvFoods, ComponentModel.ISupportInitialize).EndInit()
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
-        CType(dgvFoods, ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
     End Sub
@@ -498,17 +493,6 @@ Partial Class NutritionForm
     Friend WithEvents lblCarbs As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents lblFat As Label
-    Friend WithEvents btnAddUncat As Button
-    Friend WithEvents btnAddBreakfast As Button
-    Friend WithEvents btnAddLunch As Button
-    Friend WithEvents btnAddDinner As Button
-    Friend WithEvents btnAddSnacks As Button
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents cbUncat As ComboBox
-    Friend WithEvents cbSnacks As ComboBox
-    Friend WithEvents cbDinner As ComboBox
-    Friend WithEvents cbLunch As ComboBox
-    Friend WithEvents cbBreakfast As ComboBox
     Friend WithEvents btnBack As Button
     Friend WithEvents dgvFoods As DataGridView
     Friend WithEvents colMealCategory As DataGridViewTextBoxColumn
@@ -518,4 +502,15 @@ Partial Class NutritionForm
     Friend WithEvents colProtein As DataGridViewTextBoxColumn
     Friend WithEvents colCarbs As DataGridViewTextBoxColumn
     Friend WithEvents colFat As DataGridViewTextBoxColumn
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents btnAddUncat As Button
+    Friend WithEvents btnAddLunch As Button
+    Friend WithEvents btnAddDinner As Button
+    Friend WithEvents btnAddBreakfast As Button
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents btnAddSnacks As Button
 End Class

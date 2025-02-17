@@ -163,6 +163,7 @@ Partial Class WorkoutForm
         Me.AutoScaleDimensions = New SizeF(7F, 15F)
         Me.AutoScaleMode = AutoScaleMode.Font
         Me.ClientSize = New Size(829, 644)
+        Me.ControlBox = False
         Me.Controls.Add(FlowLayoutPanel1)
         Me.Controls.Add(Label2)
         Me.Controls.Add(btnStartEmptyWorkout)

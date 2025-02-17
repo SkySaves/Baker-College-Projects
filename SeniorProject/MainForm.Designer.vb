@@ -32,9 +32,9 @@ Partial Class MainForm
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ImageAlign = ContentAlignment.TopCenter
-        Label1.Location = New Point(167, 50)
+        Label1.Location = New Point(146, 38)
         Label1.Name = "Label1"
-        Label1.Size = New Size(362, 28)
+        Label1.Size = New Size(289, 21)
         Label1.TabIndex = 0
         Label1.Text = "Please select where you would like to go"
         Label1.TextAlign = ContentAlignment.TopCenter
@@ -43,9 +43,10 @@ Partial Class MainForm
         ' 
         btnWorkout.BackColor = SystemColors.ActiveCaptionText
         btnWorkout.ForeColor = SystemColors.ButtonHighlight
-        btnWorkout.Location = New Point(237, 128)
+        btnWorkout.Location = New Point(207, 96)
+        btnWorkout.Margin = New Padding(3, 2, 3, 2)
         btnWorkout.Name = "btnWorkout"
-        btnWorkout.Size = New Size(222, 81)
+        btnWorkout.Size = New Size(194, 61)
         btnWorkout.TabIndex = 1
         btnWorkout.Text = "Workout Tracker"
         btnWorkout.UseVisualStyleBackColor = False
@@ -54,21 +55,23 @@ Partial Class MainForm
         ' 
         btnNutrition.BackColor = SystemColors.ActiveCaptionText
         btnNutrition.ForeColor = SystemColors.ButtonHighlight
-        btnNutrition.Location = New Point(237, 259)
+        btnNutrition.Location = New Point(207, 194)
+        btnNutrition.Margin = New Padding(3, 2, 3, 2)
         btnNutrition.Name = "btnNutrition"
-        btnNutrition.Size = New Size(222, 81)
+        btnNutrition.Size = New Size(194, 61)
         btnNutrition.TabIndex = 2
         btnNutrition.Text = "Nutrition Tracker"
         btnNutrition.UseVisualStyleBackColor = False
         ' 
         ' MainForm
         ' 
-        Me.AutoScaleDimensions = New SizeF(8F, 20F)
+        Me.AutoScaleDimensions = New SizeF(7F, 15F)
         Me.AutoScaleMode = AutoScaleMode.Font
-        Me.ClientSize = New Size(691, 450)
+        Me.ClientSize = New Size(605, 338)
         Me.Controls.Add(btnNutrition)
         Me.Controls.Add(btnWorkout)
         Me.Controls.Add(Label1)
+        Me.Margin = New Padding(3, 2, 3, 2)
         Me.Name = "MainForm"
         Me.Text = "MainForm"
         Me.ResumeLayout(False)

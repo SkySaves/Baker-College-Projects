@@ -3,10 +3,15 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>SeniorProject.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <ApplicationIcon>fitness_121040.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="fitness_121040.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />

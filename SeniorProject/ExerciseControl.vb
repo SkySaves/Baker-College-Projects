@@ -9,14 +9,14 @@
     Public Event AddSetClicked(ByVal sender As ExerciseControl, ByVal e As EventArgs)
     Public Event ExerciseNotesClicked(ByVal sender As ExerciseControl, ByVal e As EventArgs)
 
+    ' Constructor taking an Exercise instance
     Public Sub New(ex As Exercise)
         InitializeComponent()
         _exercise = ex
         PopulateExerciseData()
     End Sub
 
-    ' If using a parameterless constructor (Designer usually wants one),
-    ' you can do Overloads or pass in data after InitializeComponent.
+    ' Parameterless constructor for Designer
     Public Sub New()
         InitializeComponent()
     End Sub
@@ -27,16 +27,15 @@
         End Get
     End Property
 
-
-
     Private Sub ExerciseControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' If you only have ex in constructor, you can move Populate call here, etc.
+        If _exercise IsNot Nothing Then PopulateExerciseData()
     End Sub
 
     Private Sub PopulateExerciseData()
         If _exercise Is Nothing Then Return
 
         txtExerciseName.Text = _exercise.ExerciseName
+
         If String.IsNullOrWhiteSpace(_exercise.Notes) Then
             pnlNotes.Visible = False
         Else
@@ -44,9 +43,7 @@
             txtExerciseNotes.Text = _exercise.Notes
         End If
 
-        ' Clear existing rows in your sets table (DataGridView or TableLayoutPanel, etc.)
         dgvSets.Rows.Clear()
-
         For i As Integer = 0 To _exercise.Sets.Count - 1
             Dim s As ExerciseSet = _exercise.Sets(i)
             dgvSets.Rows.Add(
@@ -54,8 +51,7 @@
                 $"{s.PreviousWeight} lbs × {s.PreviousReps}",
                 s.Weight.ToString(),
                 s.Reps.ToString(),
-                s.IsCompleted
-            )
+                s.IsCompleted)
         Next
     End Sub
 
@@ -63,34 +59,42 @@
         RaiseEvent AddSetClicked(Me, EventArgs.Empty)
     End Sub
 
-    ' If you have a button or label to toggle the note area:
-    'Private Sub btnToggleNotes_Click(sender As Object, e As EventArgs) Handles btnToggleNotes.Click
-    ' pnlNotes.Visible = Not pnlNotes.Visible
-    'End Sub
-
-    ' If the user changes sets in the DGV, or checks them off, handle it:
     Private Sub dgvSets_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) _
         Handles dgvSets.CellValueChanged
+
+        If _exercise Is Nothing Then Return
 
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             Dim row = dgvSets.Rows(e.RowIndex)
             Dim setObj = _exercise.Sets(e.RowIndex)
 
-            ' Column mapping depends on how you set up your DataGridView:
-            setObj.SetNumber = CInt(row.Cells("colSetNumber").Value)
-            ' The 'Previous' column is read-only (optional).
-            setObj.Weight = CDbl(row.Cells("colWeight").Value)
-            setObj.Reps = CInt(row.Cells("colReps").Value)
-            setObj.IsCompleted = CBool(row.Cells("colCompleted").Value)
+            Try
+                ' Note: The SetNumber and Previous columns are read-only.
+                setObj.Weight = CDbl(row.Cells("colWeight").Value)
+                setObj.Reps = CInt(row.Cells("colReps").Value)
+                setObj.IsCompleted = Convert.ToBoolean(row.Cells("colCompleted").Value)
 
-            RaiseEvent ExerciseChanged(Me, EventArgs.Empty)
+                RaiseEvent ExerciseChanged(Me, EventArgs.Empty)
+            Catch ex As Exception
+                MessageBox.Show("Invalid input in the sets grid. Please check your values." & Environment.NewLine & ex.Message,
+                                "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ' Optionally revert the grid values back to the in‐memory object.
+                PopulateExerciseData()
+            End Try
         End If
     End Sub
 
     Private Sub txtExerciseName_TextChanged(sender As Object, e As EventArgs) Handles txtExerciseName.TextChanged
         If _exercise IsNot Nothing Then
-            ' Store whatever the user typed into the in-memory object
             _exercise.ExerciseName = txtExerciseName.Text
+            RaiseEvent ExerciseChanged(Me, EventArgs.Empty)
+        End If
+    End Sub
+
+    Private Sub txtExerciseNotes_TextChanged(sender As Object, e As EventArgs) Handles txtExerciseNotes.TextChanged
+        If _exercise IsNot Nothing Then
+            _exercise.Notes = txtExerciseNotes.Text
+            RaiseEvent ExerciseChanged(Me, EventArgs.Empty)
         End If
     End Sub
 End Class

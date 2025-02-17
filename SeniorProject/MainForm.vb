@@ -12,7 +12,7 @@
     End Sub
 
     Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        ' In alpha version, just exit.
         Application.Exit()
     End Sub
+
 End Class

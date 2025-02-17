@@ -158,6 +158,7 @@ Partial Class WorkoutFormIndividual
         Me.AutoScaleDimensions = New SizeF(7F, 15F)
         Me.AutoScaleMode = AutoScaleMode.Font
         Me.ClientSize = New Size(844, 672)
+        Me.ControlBox = False
         Me.Controls.Add(txtWorkoutName)
         Me.Controls.Add(flpExercises)
         Me.Controls.Add(btnAddExercise)
