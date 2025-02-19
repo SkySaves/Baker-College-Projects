@@ -15,8 +15,6 @@ Public Class WorkoutFormIndividual
         _currentWorkout = workout
     End Sub
 
-
-
     ' Constructor that takes a WorkoutTemplate and creates a new Workout
     Public Sub New(template As WorkoutTemplate)
         InitializeComponent()
@@ -153,6 +151,8 @@ Public Class WorkoutFormIndividual
                 Next
 
                 WorkoutDataStore.CurrentTemplates.Add(newTemplate)
+                ' Save the new template list to disk so it persists across sessions.
+                WorkoutDataStore.SaveTemplates()
             End If
 
             Dim wf As New WorkoutForm()
@@ -179,7 +179,7 @@ Public Class WorkoutFormIndividual
             Dim elapsed As TimeSpan = DateTime.Now - _currentWorkout.StartTime
             lblElapsedTime.Text = elapsed.ToString("mm\:ss")
         Catch ex As Exception
-            ' Optionally log or silently handle timer errors.
+            ' Optionally handle timer errors silently.
         End Try
     End Sub
 

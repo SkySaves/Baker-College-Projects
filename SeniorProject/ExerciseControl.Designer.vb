@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ExerciseControl
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ExerciseControl
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         pnlNotes = New Panel()
         txtExerciseNotes = New RichTextBox()
@@ -28,7 +28,6 @@ Partial Class ExerciseControl
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         dgvSets = New DataGridView()
         colSetNumber = New DataGridViewTextBoxColumn()
-        colPrevious = New DataGridViewTextBoxColumn()
         colWeight = New DataGridViewTextBoxColumn()
         colReps = New DataGridViewTextBoxColumn()
         colCompleted = New DataGridViewCheckBoxColumn()
@@ -68,7 +67,7 @@ Partial Class ExerciseControl
         dgvSets.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvSets.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         dgvSets.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvSets.Columns.AddRange(New DataGridViewColumn() {colSetNumber, colPrevious, colWeight, colReps, colCompleted})
+        dgvSets.Columns.AddRange(New DataGridViewColumn() {colSetNumber, colWeight, colReps, colCompleted})
         dgvSets.Location = New Point(100, 149)
         dgvSets.Name = "dgvSets"
         dgvSets.Size = New Size(543, 92)
@@ -79,12 +78,6 @@ Partial Class ExerciseControl
         colSetNumber.HeaderText = "Set #"
         colSetNumber.Name = "colSetNumber"
         colSetNumber.ReadOnly = True
-        ' 
-        ' colPrevious
-        ' 
-        colPrevious.HeaderText = "Previous"
-        colPrevious.Name = "colPrevious"
-        colPrevious.ReadOnly = True
         ' 
         ' colWeight
         ' 
@@ -114,7 +107,7 @@ Partial Class ExerciseControl
         ' 
         ' ExerciseControl
         ' 
-        Me.AutoScaleDimensions = New SizeF(7F, 15F)
+        Me.AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         Me.AutoScaleMode = AutoScaleMode.Font
         Me.Controls.Add(txtExerciseName)
         Me.Controls.Add(dgvSets)
@@ -136,7 +129,6 @@ Partial Class ExerciseControl
     Friend WithEvents colWeight As DataGridViewTextBoxColumn
     Friend WithEvents colReps As DataGridViewTextBoxColumn
     Friend WithEvents colCompleted As DataGridViewCheckBoxColumn
-    Friend WithEvents colPrevious As DataGridViewTextBoxColumn
     Friend WithEvents txtExerciseName As TextBox
 
 End Class

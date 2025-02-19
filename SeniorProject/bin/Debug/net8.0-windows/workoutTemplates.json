@@ -1,0 +1,61 @@
+[
+  {
+    "TemplateID": 1,
+    "TemplateName": "Leg Day",
+    "LastPerformedOn": "2025-02-16T07:53:04.8098512-05:00",
+    "Exercises": [
+      {
+        "ExerciseName": "Lying Leg Curl",
+        "IsMachine": true,
+        "Notes": null,
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "PreviousWeight": 40.0,
+            "PreviousReps": 8,
+            "Weight": 50.0,
+            "Reps": 10,
+            "IsCompleted": false
+          }
+        ]
+      },
+      {
+        "ExerciseName": "Leg Extension",
+        "IsMachine": true,
+        "Notes": null,
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "PreviousWeight": 0.0,
+            "PreviousReps": 0,
+            "Weight": 60.0,
+            "Reps": 12,
+            "IsCompleted": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "TemplateID": 2,
+    "TemplateName": "Test1",
+    "LastPerformedOn": "2025-02-19T07:53:36.1984951-05:00",
+    "Exercises": [
+      {
+        "ExerciseName": "Test2",
+        "IsMachine": false,
+        "Notes": null,
+        "Sets": [
+          {
+            "SetNumber": 1,
+            "PreviousWeight": 0.0,
+            "PreviousReps": 0,
+            "Weight": 233.0,
+            "Reps": 12,
+            "IsCompleted": true
+          }
+        ]
+      }
+    ]
+  }
+]

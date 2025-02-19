@@ -152,5 +152,19 @@
   "2025-02-18T00:00:00-05:00": {
     "LogDate": "2025-02-18T00:00:00-05:00",
     "Foods": []
+  },
+  "2025-02-19T00:00:00-05:00": {
+    "LogDate": "2025-02-19T00:00:00-05:00",
+    "Foods": [
+      {
+        "MealCategory": "Breakfast",
+        "FoodName": "Ground Beef (Hamburger, Approx 23% Fat, Frozen Patties)",
+        "ServingDescription": "1 x 100 g",
+        "Calories": 282.0,
+        "Protein": 17.11,
+        "Carbs": 0.0,
+        "Fat": 23.19
+      }
+    ]
   }
 }

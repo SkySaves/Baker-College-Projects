@@ -35,7 +35,6 @@
         If _exercise Is Nothing Then Return
 
         txtExerciseName.Text = _exercise.ExerciseName
-
         If String.IsNullOrWhiteSpace(_exercise.Notes) Then
             pnlNotes.Visible = False
         Else
@@ -44,11 +43,12 @@
         End If
 
         dgvSets.Rows.Clear()
+
+        ' NOTE: Removed the previous data from the row.
         For i As Integer = 0 To _exercise.Sets.Count - 1
             Dim s As ExerciseSet = _exercise.Sets(i)
             dgvSets.Rows.Add(
                 s.SetNumber.ToString(),
-                $"{s.PreviousWeight} lbs × {s.PreviousReps}",
                 s.Weight.ToString(),
                 s.Reps.ToString(),
                 s.IsCompleted)
@@ -62,14 +62,13 @@
     Private Sub dgvSets_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) _
         Handles dgvSets.CellValueChanged
 
-        If _exercise Is Nothing Then Return
-
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             Dim row = dgvSets.Rows(e.RowIndex)
             Dim setObj = _exercise.Sets(e.RowIndex)
 
             Try
-                ' Note: The SetNumber and Previous columns are read-only.
+                ' Only update the editable columns.
+                setObj.SetNumber = CInt(row.Cells("colSetNumber").Value)
                 setObj.Weight = CDbl(row.Cells("colWeight").Value)
                 setObj.Reps = CInt(row.Cells("colReps").Value)
                 setObj.IsCompleted = Convert.ToBoolean(row.Cells("colCompleted").Value)
@@ -78,7 +77,6 @@
             Catch ex As Exception
                 MessageBox.Show("Invalid input in the sets grid. Please check your values." & Environment.NewLine & ex.Message,
                                 "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                ' Optionally revert the grid values back to the in‐memory object.
                 PopulateExerciseData()
             End Try
         End If
@@ -97,4 +95,5 @@
             RaiseEvent ExerciseChanged(Me, EventArgs.Empty)
         End If
     End Sub
+
 End Class
