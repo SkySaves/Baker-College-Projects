@@ -118,18 +118,6 @@ This is a Visual Basic .NET Windows Forms application that serves as a combined 
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please feel free to fork this repository and submit pull requests. If you find any issues or have suggestions for improvements, open an issue on GitHub.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## Acknowledgements
 
 - **FatSecret API** for providing nutrition data.
